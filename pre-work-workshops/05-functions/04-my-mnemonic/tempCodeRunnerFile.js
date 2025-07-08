@@ -1,0 +1,1 @@
+myMnemonic('We', 'Eat', 'Eggs'); // => WEE

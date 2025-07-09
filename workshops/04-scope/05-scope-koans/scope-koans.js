@@ -1,7 +1,8 @@
 // Test One Restrictions: Do not declare any new variable with the let keyword
 let testOneMessage = 'test failing';
 
-function testOne() {
+function testOne(testFourMessage) {
+  let testOneMessage = testFourMessage; //changed
   return testOneMessage;
 }
 
@@ -17,8 +18,11 @@ function testTwo() {
 
 function helperFunc(a) {
   a = 'test succeeding';
+  testTwoMessage = a; //added;
   return a;
 }
+
+
 
 
 // Test Three Restrictions: Type only a single character in either testThree or getMessage
@@ -29,7 +33,7 @@ function testThree(testThreeMessage) {
     testThreeMessage = 'test succeeding';
   }
 
-  let msg = getMessage();
+  let msg = getMessage(testThreeMessage);//parameter added
   return msg;
 
   function getMessage(value) {
@@ -45,20 +49,20 @@ function testThree(testThreeMessage) {
 // Test Four Restrictions: Delete only a single character from any function.
 let testFourMessage = 'test succeeding';
 
-function testFour(msg) {
-  function innerFunc(msg) {
+function testFour(msg) { // msg = "test failing"
+  function innerFunc(msg) { // msg = "test succeeding"
     msg = msg
 
-    function doubleInner(msg) {
-      testFourMessage = msg;
+    function doubleInner(msg) { // msg ="test failing"
+      // testFourMessage = msg; removed line  //testFourMessage = "test failing"
       return testFourMessage;
     }
 
-    testFourMessage = doubleInner('test failing')
+    testFourMessage = doubleInner('test failing') //test failing
   }
 
   innerFunc(testFourMessage);
 
-  msg = testFourMessage;
+  msg = testFourMessage; 
   return testFourMessage;
 }

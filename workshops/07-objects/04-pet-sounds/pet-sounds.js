@@ -38,3 +38,24 @@ let animalNoises = [
 ];
 
 // YOUR CODE BELOW
+
+function petSounds(animal,country){
+  for(let i=0; i<animalNoises.length; i++){
+    let animalObj = animalNoises[i];
+    
+    let animalName = Object.keys(animalObj)[0];
+
+    let countriesName = animalObj[animalName];
+    
+    for(let j=0; j<countriesName.length; j++){
+      if(countriesName[j][country] === true){
+        console.log(`${animalName} in ${countriesName[j]} say ${countries[j][country]}!`)
+      }
+    }
+    
+  }
+}
+
+ // => Dogs in Iceland say Voff voff!
+let p=petSounds('dog', 'Iceland');
+console.log(p);

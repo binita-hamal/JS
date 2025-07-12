@@ -38,3 +38,28 @@ let classRoom = [
 ];
 
 // YOUR CODE BELOW
+
+function classCheck(day){
+    let arr=[];
+    for(let i=0;i<classRoom.length;i++){
+
+        let studentObj = classRoom[i];
+        let studentName = Object.keys(studentObj)[0];
+
+        let attendance = studentObj[studentName]
+
+        for(let j=0; j<attendance.length; j++){
+            if(attendance[j][day] ===true){
+                arr.push(studentName);
+                break;
+            }
+        }
+      
+
+    }
+    return arr;
+
+}
+
+let c=classCheck('Monday'); // => ['Marnie', 'Shoshanna']
+console.log(c);

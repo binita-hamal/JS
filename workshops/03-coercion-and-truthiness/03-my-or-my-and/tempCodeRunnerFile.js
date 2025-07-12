@@ -1,0 +1,1 @@
+let r=myAnd(1, 'apples', true)

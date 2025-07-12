@@ -4,6 +4,7 @@ describe('incrementalChange', () => {
   beforeEach(() => {
     counter = 0;
   });
+  
 
   it('is a function', () => {
     expect(typeof incrementalChange).toEqual('function');

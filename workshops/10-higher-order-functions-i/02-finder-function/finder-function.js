@@ -5,13 +5,11 @@ function func(){
 
 function finderFunction(array,func){
     for(let i=0; i<array.length;i++){
-    if(true){
-        return array[i];
-        
+    if(func(array[i])){
+        return i;
     }
-    else{
-        return -1;
-    }
-
+    
 }
+
+return -1;
 }

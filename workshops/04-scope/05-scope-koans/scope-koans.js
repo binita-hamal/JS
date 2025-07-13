@@ -33,7 +33,7 @@ function testThree(testThreeMessage) {
     testThreeMessage = 'test succeeding';
   }
 
-  let msg = getMessage(testThreeMessage);//parameter added
+  let msg = getMessage(1);//parameter added
   return msg;
 
   function getMessage(value) {
@@ -53,8 +53,8 @@ function testFour(msg) { // msg = "test failing"
   function innerFunc(msg) { // msg = "test succeeding"
     msg = msg
 
-    function doubleInner(msg) { // msg ="test failing"
-      // testFourMessage = msg; removed line  //testFourMessage = "test failing"
+    function doubleInner(ms) { // msg ="test failing"
+      testFourMessage = msg;  //testFourMessage = "test failing"
       return testFourMessage;
     }
 

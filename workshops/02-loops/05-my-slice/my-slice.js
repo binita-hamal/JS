@@ -1,6 +1,6 @@
 // YOUR CODE BELOW
 
-function mySlice(originalString,startIdx,endIdx){
+function mySlice(originalString,startIdx=0,endIdx){
     let newString = ""
     if(endIdx === undefined && startIdx !== undefined){
         for(let i=startIdx; i<originalString.length; i++){

@@ -1,5 +1,4 @@
 ### Clone Machine
-
 Write a function `cloneMachine`, that, given an animal (represented as an object),
 returns a clone of the original animal.
 

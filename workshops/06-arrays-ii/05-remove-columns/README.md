@@ -8,7 +8,7 @@ Write a function `removeColumns` that accepts two arguments
 
 ```javascript
 removeColumns([[1, 2, 3],
-               [1, 2, 3],
+              [1, 2, 3],
                [1, 2, 3],
                [1, 2, 3]], 2);
 /* => [[1],

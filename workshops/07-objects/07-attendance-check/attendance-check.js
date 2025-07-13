@@ -39,17 +39,14 @@ let classRoom = [
 
 // YOUR CODE BELOW
 
-function classCheck(day){
+function attendanceCheck(day){
     let arr=[];
     for(let i=0;i<classRoom.length;i++){
-
-        let studentObj = classRoom[i];
-        let studentName = Object.keys(studentObj)[0];
-
-        let attendance = studentObj[studentName]
-
+        let studentObj = classRoom[i]; 
+        let studentName = Object.keys(studentObj)[0];//marnie
+        let attendance = studentObj[studentName] 
         for(let j=0; j<attendance.length; j++){
-            if(attendance[j][day] ===true){
+            if(attendance[j][day]){
                 arr.push(studentName);
                 break;
             }
@@ -60,6 +57,3 @@ function classCheck(day){
     return arr;
 
 }
-
-let c=classCheck('Monday'); // => ['Marnie', 'Shoshanna']
-console.log(c);

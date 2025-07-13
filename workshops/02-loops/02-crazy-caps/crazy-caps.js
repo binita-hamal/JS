@@ -12,7 +12,7 @@
 function crazyCaps(string){
     let result ='';
     for(let i=0; i<string.length; i++){
-        if(i%2 ===0){
+        if(i%2){
             result += string[i].toUpperCase();
         }
         else{

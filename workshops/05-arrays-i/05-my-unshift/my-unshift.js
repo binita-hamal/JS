@@ -1,6 +1,5 @@
 
-//no use of unshift method
-function unShift(arr,a){
+function myUnshift(arr,a){
     let newArr  = [];
     newArr.push(a); // newArr = [1,2,3,0]
 
@@ -9,5 +8,3 @@ function unShift(arr,a){
     }
     return newArr;
 }
-let a  =unShift([1, 2, 3], 0); //[0 1 2 3]
-console.log(a);

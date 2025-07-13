@@ -19,5 +19,3 @@ function arrayFlattener(arr){
     return a;
 
 }
-let a=arrayFlattener([1,[2, 3], 4]); // => [1, 2, 3, 4]
-console.log(a)

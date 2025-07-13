@@ -13,12 +13,4 @@ function rotateArray(array, num) {
   }
 }
 
-//[1,2,3,4,5],-2 ==> []
-let a = rotateArray([1, 2, 3, 4, 5], 1); // => [5, 1, 2, 3, 4]
-console.log(a);
-let b = rotateArray([1, 2, 3, 4, 5], 2); // [4,5,1,2,3]
-console.log(b);
-
-let c = rotateArray([1, 2, 3, 4, 5], -2);
-console.log(c);
 

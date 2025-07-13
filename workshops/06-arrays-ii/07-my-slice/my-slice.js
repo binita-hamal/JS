@@ -1,30 +1,27 @@
-// YOUR CODE BELOW
 
-function mySlice(array,startIdx,endIdx){
-    let newStr = [];
-    if(startIdx ===undefined && endIdx === undefined){
-        return array;
+function mySlice(array, startIdx, endIdx) {
+    debugger;
+  let newStr = [];
+  if (startIdx === undefined && endIdx === undefined) {
+    return array;
+  }
+  if (startIdx < 0) {
+    startIdx = array.length + startIdx;
+  }
+  if (endIdx < 0) {
+    endIdx = array.length + endIdx;
+  }
+  if (endIdx === undefined) {
+    for (let i = startIdx; i < array.length; i++) {
+      newStr.push(array[i]);
     }
-    else if(endIdx===undefined){
-        for(let i=startIdx; i<array.length; i++){
-            newStr.push(array[i]);
-        }
+  }  
+    for (let i = startIdx; i < endIdx; i++) {
+      newStr.push(array[i]);
     }
-    else{
-        for(let i=startIdx; i<endIdx; i++){
-            newStr.push(array[i]);
-        }
-    }
-    return newStr;
-
-
+  
+  return newStr;
 }
 
-let a=mySlice([1, 2, 3], 1, 2) // => [2]
-console.log(a);
+mySlice(['bagel', 'baguette', 'bialy', 'brioche'], 0, -1);
 
-let b = mySlice([1, 2, 3], 1) // => [2, 3]
-console.log(b);
-
-let c = mySlice([1, 2, 3]) // => [1, 2, 3]
-console.log(c);

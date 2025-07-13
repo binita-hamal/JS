@@ -25,6 +25,3 @@ function zooInventory(zoo) {
     ['Nemo', ['fish', 5]],
     ['Punxsutawney Phil', ['groundhog', 11]]
   ];
-  
-let a= zooInventory(myZoo);
-console.log(a);
